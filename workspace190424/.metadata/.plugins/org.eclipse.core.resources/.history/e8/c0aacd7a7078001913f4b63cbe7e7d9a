@@ -1,0 +1,71 @@
+package ex_test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class EmpManager {
+	public static void main(String[] args) {
+		String sql = "select employee_id, first_name, salary "
+				+ " from employees e, jobs j "
+				+ " where j.job_id = j.job_id "
+				+ " and job_title = ? or job_title = ?";
+		
+		String driver = "oracle.jdbc.OracleDriver";
+		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
+		String user = "hr";
+		String pw = "hr";
+		
+		Connection con = null;
+		Statement st = null;
+		ResultSet rs = null;
+		
+		PreparedStatement ps = null;
+		
+		int row = 0;
+		
+		try {
+			Class.forName(driver); //1. 드라이버 로딩
+			con = DriverManager.getConnection(url,user,pw); //2. DB연결
+			st = con.createStatement(); //3. sql 관리 개체 Statement 생성
+			rs = st.executeQuery(sql); //4. sql 구문 실행
+			
+			ps = con.prepareStatement(sql);
+			
+			//? 세팅작업
+			ps.setString(1, "President");
+			ps.setString(2, "Accountant");
+			
+			//실행
+			row = ps.executeUpdate();
+			
+			//결과값 처리
+			while(rs.next()) {
+				System.out.print(rs.getString("employee_id")+"  ");
+				System.out.print(rs.getString("first_name")+"  ");
+				System.out.print(rs.getInt("salary")+"  ");
+				System.out.println();
+			}
+			
+		} catch (ClassNotFoundException e) {
+			System.out.println("jdbc driver 확인요.");
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} finally {	
+			try {
+				if(rs != null) rs.close();
+				if(st != null) st.close();
+				if(con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		
+		System.out.println("** end **");
+	}
+
+}

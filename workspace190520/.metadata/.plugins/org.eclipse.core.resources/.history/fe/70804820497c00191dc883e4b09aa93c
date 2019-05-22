@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content ="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form action = "process.html">
+	
+		<input type = "file">
+		<br>
+		<input type = "reset" value = "취소">
+		<br>
+		<input type = "image" src = "./img/rss.png" 
+			alt = "제출버튼"><br>
+		<button 
+			type = "submit">
+				<img src = "./img/rss.png" alt = "제출버튼">
+		</button>
+
+	
+	</form>
+
+</body>
+</html>

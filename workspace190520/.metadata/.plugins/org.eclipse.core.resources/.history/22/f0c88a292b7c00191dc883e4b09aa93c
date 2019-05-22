@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content ="width=device-width, initial-scale=1">
+<title>audio</title>
+</head>
+<body>
+	<h2>오디오 재생</h2>
+	<audio autoplay = "autoplay" controls = "controls">
+		<source src="./audio/johan.mp3" type = "audio/mp3">
+		<source src="./audio/johan.ogg" type = "audio/ogg">
+	</audio>	
+	<div>
+	<video width = 340 height = 430 controls = "controls">
+	
+		<source src="./video/BigBuck.mp4" type = "vidoe/mp4">
+	
+	</video>
+	</div>
+	
+</body>
+</html>

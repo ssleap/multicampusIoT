@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+h1:hover{
+	color: purple;
+}
+h1:active {
+	color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

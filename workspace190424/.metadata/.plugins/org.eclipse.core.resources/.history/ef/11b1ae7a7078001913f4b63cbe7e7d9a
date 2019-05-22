@@ -1,0 +1,56 @@
+package test_scott;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import Util.JDBCUtil;
+
+public class prob0516 {
+	public static void main(String[] args) {
+
+		String sql = "select to_char(count(*)) as \"직속부하직원수\",\r\n" + 
+				"to_char(e.manager_id) as \"관리자사번\",\r\n" + 
+				"m.last_name as \"관리자이름\"\r\n" + 
+				"from employees e join employees m\r\n" + 
+				"on e.manager_id = m.employee_id\r\n" + 
+				"group by e.manager_id, m.last_name\r\n" + 
+				"having count(*) >=8\r\n" + 
+				"order by count(*)\r\n";
+
+		Connection con = null;
+		Statement st = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+
+		int row = 0;
+
+		try {
+			con = JDBCUtil.getConnection();
+			st = con.createStatement();
+
+			ps = con.prepareStatement(sql);
+			// ? 세팅
+
+			// 실행
+			rs = ps.executeQuery();
+			// 결과값핸들링
+			while (rs.next()) {
+				System.out.print(rs.getString("직속부하직원수") + "  ");
+				System.out.print(rs.getString("관리자사번") + "  ");
+				System.out.print(rs.getString("관리자이름") + "  ");
+				System.out.println();
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(con, st, rs);
+		}
+
+	}
+}

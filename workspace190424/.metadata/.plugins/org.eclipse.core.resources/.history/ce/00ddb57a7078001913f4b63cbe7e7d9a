@@ -1,0 +1,44 @@
+package test.hr;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import util.JDBCUtil;
+
+public class EmpManager_소현우 {
+	public static void printEmployee(String jobs[]) {
+		String jtitle[] = new String[2];
+		jtitle[0] = jobs[0];
+		jtitle[1] = jobs[1];
+		String sql = "select employee_id 사번, first_name 이름, salary 연봉" + " from employees e join jobs j"
+				+ " on e.job_id = j.job_id"
+				+ " where j.job_id in (select job_id from jobs"
+				+ " where lower(job_title)=? or lower(job_title)=?)";
+
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+
+		try {
+			con = JDBCUtil.getConnection();// 로딩,연결
+			ps = con.prepareStatement(sql);// statement생성
+			ps.setString(1, jtitle[0].toLowerCase());
+			ps.setString(2, jtitle[1].toLowerCase());// ?세팅
+			rs = ps.executeQuery();// 실행
+
+			while (rs.next()) {
+				System.out.print(rs.getString(1) + "   ");
+				System.out.print(rs.getString(2) + "   ");
+				System.out.print(rs.getString(3) + "   ");
+				System.out.println();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(con, ps, rs);
+		}
+	}
+
+}

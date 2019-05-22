@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="close"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="close"/>
+			<item value="TO"/>
+			<item value="NEXT"/>
+			<item value="%"/>
+			<item value="SEQ"/>
+			<item value="SET"/>
+			<item value="COLUMN"/>
+			<item value="MODI"/>
+			<item value="REFER"/>
+			<item value="DROP"/>
+			<item value="ADD"/>
+			<item value="COL"/>
+			<item value="ADD COL"/>
+			<item value="DESC"/>
+			<item value="HISAL"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="934"/>
+		<item key="DIALOG_Y_ORIGIN" value="301"/>
+		<item key="DIALOG_WIDTH" value="288"/>
+		<item key="DIALOG_HEIGHT" value="390"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="409"/>
+		<item key="DIALOG_Y_ORIGIN" value="376"/>
+	</section>
+</section>

@@ -1,0 +1,52 @@
+package app;
+
+import java.util.List;
+
+import dao.BookDao;
+import service.BookService;
+import service.BookServiceImpl;
+import vo.BookVo;
+
+
+public class BookApp {
+
+	public static void main(String[] args) {
+		
+		BookDao dao = new BookDao();
+		BookService bs = new BookServiceImpl();
+		
+		BookVo vo = new BookVo();
+		
+		vo.setAuthor("vmvmvm");
+		vo.setBookno(33);
+		vo.setPrice(3333333);
+		vo.setPubdate("2015-05-15");
+		vo.setTitle("a);a;a;a");
+		
+		try {
+			bs.addBook(vo);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		if(bs != null) {
+			List<BookVo> list = bs.bookList();
+			list.forEach(i->System.out.println(i));
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

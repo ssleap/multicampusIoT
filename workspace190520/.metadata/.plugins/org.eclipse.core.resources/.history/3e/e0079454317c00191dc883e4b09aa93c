@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content ="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<h1> form 처리 Get 방식</h1>
+	
+	<form method ="get">
+		이름 : <input 
+		type = "text" name = 'name' value =""><br>
+		
+		id : <input type = "text" name = "id" value = "">
+		<br>
+		pw : <input 
+		type = "text" name = "password" value = ""><br>
+		
+		<input type = "submit">
+		<input type = "reset"> 
+	</form>
+	
+	<h1> form 처리 Post 방식</h1>
+
+
+</body>
+</html>

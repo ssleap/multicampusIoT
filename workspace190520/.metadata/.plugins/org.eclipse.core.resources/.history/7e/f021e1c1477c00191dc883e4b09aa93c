@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content ="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<h1> form 처리 Get 방식</h1>
+	
+	<form action="process.html" method ="get">
+	
+		id : <input 
+		type = "text" 
+		name = "id" 
+		value = ""
+		placeholder = "ID를 입력">
+		<br>
+		
+		pw : <input 
+		type = "text" 
+		name = "password" 
+		value = ""
+		placeholder = "비번 입력"><br>
+		
+		<input 
+		type = "submit" 
+		value = "로그인">
+		<input 
+		type = "reset" 
+		value = "취소"> 
+	</form>
+	
+	<br><br>
+	
+	<form action="process.jsp" method ="get">
+	<table border = "1">
+	
+		<tr> <td>id</td> <td><input 
+			type = "text" 
+			name = "id" 
+			value = ""
+			placeholder = "ID를 입력"></td> </tr>
+		<tr> <td>pw</td> <td><input 
+			type = "text" 
+			name = "password" 
+			value = ""
+			placeholder = "비번 입력"></td> </tr>
+		<tr> 
+			<td colspan = "2" align = "center">
+				<input 
+				type = "submit" 
+				value = "로그인">
+				<input 
+				type = "reset" 
+				value = "취소"> 
+			</td> 
+		</tr>
+		
+	
+	</table>
+	</form>
+	<h1> form 처리 Post 방식</h1>
+	
+	<form action="process.jsp" method ="post">
+	<table border = "1">
+	
+		<tr> <td>id</td> <td><input 
+			type = "text" 
+			name = "id" 
+			value = ""
+			placeholder = "ID를 입력"></td> </tr>
+		<tr> <td>pw</td> <td><input 
+			type = "text" 
+			name = "password" 
+			value = ""
+			placeholder = "비번 입력"></td> </tr>
+		<tr> 
+			<td colspan = "2" align = "center">
+				<input 
+				type = "submit" 
+				value = "로그인">
+				<input 
+				type = "reset" 
+				value = "취소"> 
+				<a href = "member.html">회원가입</a>
+			</td> 
+		</tr>
+		
+	
+	</table>
+	</form>
+
+
+</body>
+</html>

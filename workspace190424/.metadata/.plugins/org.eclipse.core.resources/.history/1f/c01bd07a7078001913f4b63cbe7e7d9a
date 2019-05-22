@@ -1,0 +1,57 @@
+package test.scott;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import javax.swing.JOptionPane;
+
+import util.JDBCUtil;
+
+public class EmpManager {
+	public static void main(String[] args) {
+		String jobs[] = new String[2]; 
+		jobs[0]=JOptionPane.showInputDialog("첫번째 직업 입력");
+		jobs[1]=JOptionPane.showInputDialog("두번째 직업 입력");
+		printEmployee(jobs[0], jobs[1]);
+	}
+
+	public static void printEmployee(String input1, String input2) {
+
+		String sql = "select employee_id, first_name, salary " + "from employees e, jobs j "
+				+ "where e.job_id = j.job_id " + "and ((j.job_title = ? or j.job_title = ?))";
+
+		Connection con = null;
+		Statement st = null;
+		PreparedStatement ps = null; // 변수 바인딩 용 !!
+		ResultSet rs = null;
+		int row = 0;
+
+		try {
+			con = JDBCUtil.getConnection();
+			st = con.createStatement();
+
+			ps = con.prepareStatement(sql); // prepare문이 들어옴, 물음표가있을수있ㅇ뜸
+
+			// ? 세팅작업
+			ps.setString(1, input1); // 첫번재 물음표에 들어갈거
+			ps.setString(2, input2); // 두번재 물음표에 들어갈거
+			// 실행
+			rs = ps.executeQuery();
+			// 결과 핸들링
+			while (rs.next()) {
+				System.out.print(rs.getString(1) + " ");
+				System.out.print(rs.getString(2) + " ");
+				System.out.print(rs.getString(3) + " ");
+				System.out.println();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(con, st, rs); // 자 원 반 납
+		}
+
+	}
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+	h1{
+	
+		background-color: grey;
+		
+	}
+	h1.p{
+	
+		background-color: grey;
+	
+	}
+
+</style>
+<meta charset="UTF-8">
+<meta name = "viewport" content ="width=device-width, initial-scale=1">
+<title>css 기본</title>
+</head>
+<body>
+
+	<h1>css basic</h1>
+	<p>HTML CSS JAVA
+	SCript
+	Java
+	C
+	썬 마이크로시스템즈(현재 오라클)에서 개발한 &nbsp;
+	Java와는 별 관계가 없는 언어이다.&nbsp;
+	 이름이 비슷하다고 같은 언어가 아니다. &nbsp;
+	 사람들이 흔히 헷갈리는 부분 중 하나. &nbsp;
+	</p>
+	<p>HTML CSS JAVA
+	SCript
+	Java
+	C
+	썬 마이크로시스템즈(현재 오라클)에서 개발한 &nbsp;
+	Java와는 별 관계가 없는 언어이다.&nbsp;
+	 이름이 비슷하다고 같은 언어가 아니다. &nbsp;
+	 사람들이 흔히 헷갈리는 부분 중 하나. &nbsp;
+	</p>
+	<p>HTML CSS JAVA
+	SCript
+	Java
+	C
+	썬 마이크로시스템즈(현재 오라클)에서 개발한 &nbsp;
+	Java와는 별 관계가 없는 언어이다.&nbsp;
+	 이름이 비슷하다고 같은 언어가 아니다. &nbsp;
+	 사람들이 흔히 헷갈리는 부분 중 하나. &nbsp;
+	</p>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+package test.scott;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.swing.JOptionPane;
+
+import util.JDBCUtil;
+
+public class EmpManager {
+
+	public static void main(String[] args) {
+		String sname = JOptionPane.showInputDialog("검색할 직업 정보를 입력하세요. ex)Accoutant, President");
+		String jobs[] = sname.split(",");
+		printEmployee(jobs);
+		
+	}
+	public static void printEmployee(String jobs[]) {
+		String sql = "select employee_id, first_name, salary "+
+				"from employees e, jobs j "+
+				"where e.job_id = j.job_id and job_title in (?,?)"+
+				"order by employee_id";
+		Connection con = null;
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		PreparedStatement ps = null; //변수 바인딩용
+		try {
+			con = JDBCUtil.getConnection();			
+			ps = con.prepareStatement(sql);
+			ps.setString(1, jobs[0].trim());
+			ps.setString(2, jobs[1].trim());
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				System.out.print(rs.getString("employee_id")+" ");
+				System.out.print(rs.getString("first_name")+" ");
+				System.out.print(rs.getString("salary"));
+				System.out.println();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			JDBCUtil.Close(con, st, rs);
+		}
+	}
+
+}

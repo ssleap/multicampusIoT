@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TITLE</title>
+</head>
+<body>
+
+	<h1 class = "h">IWG</h1>
+	
+	<h2 id = "i" class = "h" title = "link list" style = "color : red">
+		link list
+	</h2>
+	
+	<ul>
+	<li><a href = "test01.html">test01</a></li>
+	<li><a href = "C:/workspace190520/edu1/WebContent/test01.html">test01</a></li>
+	<li><a href = "http://70.12.115.57:9090/edu1/test01.html">test01</a></li>
+	<li><a href = "./img.html">img</a></li>
+	<li><a href = "./table.html" target = "iframe2">table</a></li>
+	<li><a href = "./workshop.html" target = "iframe1">homework</a></li>
+	<li><a href = "./audio.html">audio</a></li>
+	<li><a href = "login.html">login</a></li>
+	</ul>
+	
+	<iframe name = "iframe1" width = "900" 
+	height = "900"></iframe>
+	<iframe name = "iframe2" width = "400" 
+	height = "300"></iframe>
+	
+</body>
+</html>

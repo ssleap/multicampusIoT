@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content ="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<style>
+
+	#header{
+
+		text-align: center;
+		width :100%;
+		background: skyblue;
+		color : red;
+	
+	}
+	#footer{
+	
+		text-decoration: underline;
+		text-align: right;
+		color: blue;
+		font:italic;
+		background-color: brown;
+	
+	}
+	
+	#menu{
+	
+		color: pink;
+		text-align: left;
+		background-color: yellow;
+	}
+	
+	#main{
+	
+		color : yellow;
+		background-color: pink;
+	
+	}
+
+</style>
+</head>
+<body>
+
+	<div id = "header">
+	
+		<h1>오늘의 뉴스</h1>
+	
+	</div>
+	
+	<div id = "contents" >
+	
+		<div id = "menu">
+		
+			<ol>
+			
+				<li><a href = "#">home</a></li>
+				<li><a href = "#">login</a></li>
+				<li><a href = "#">회원가입</a></li>
+				<li><a href = "#">창고사이트</a></li>
+			
+			</ol>
+		
+		</div>
+	
+		<div id = "main">
+		
+			<p>
+			
+				HTML CSS JAVA SCript Java C 
+				썬 마이크로시스템즈(현재 오라클)에서 개발한   
+				Java와는 별 관계가 없는 언어이다.  
+				이름이 비슷하다고 같은 언어가 아니다.   
+				사람들이 흔히 헷갈리는 부분 중 하나. 
+			
+			</p>
+			
+			<p>
+			
+				HTML CSS JAVA SCript Java C 
+				썬 마이크로시스템즈(현재 오라클)에서 개발한   
+				Java와는 별 관계가 없는 언어이다.  
+				이름이 비슷하다고 같은 언어가 아니다.   
+				사람들이 흔히 헷갈리는 부분 중 하나. 
+			
+			</p>
+			
+			<p>
+			
+				HTML CSS JAVA SCript Java C 
+				썬 마이크로시스템즈(현재 오라클)에서 개발한   
+				Java와는 별 관계가 없는 언어이다.  
+				이름이 비슷하다고 같은 언어가 아니다.   
+				사람들이 흔히 헷갈리는 부분 중 하나. 
+			
+			</p>
+		
+		</div>
+	
+	</div>
+	
+	<div id = "footer">
+		기사제보및 문의 메일 : llll@llllll.com
+	</div>
+
+</body>
+</html>

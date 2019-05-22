@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content ="width=device-width, initial-scale=1">
+<title>audio</title>
+</head>
+<body>
+	<h2>오디오 재생</h2>
+	<audio autoplay = "autoplay" controls = "controls">
+		<source src="./audio/johan.mp3" type = "audio/mp3">
+		<source src="./audio/johan.ogg" type = "audio/ogg">
+		브라우저가 음악 파일 형식을 지원하지 않습니다.
+	</audio>	
+	
+	<video width = 340 height = 430>
+	
+		<source src="./video/BigBuck.mp4" controls = "controls">
+	
+	</video>
+	
+</body>
+</html>

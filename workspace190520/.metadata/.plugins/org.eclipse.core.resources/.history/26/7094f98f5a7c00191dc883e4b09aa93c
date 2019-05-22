@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+*{
+	
+	margin: 0.2em;
+	padding: 3;
+	color:navy;
+	
+}
+
+p.cancan{
+	
+	background-color: red;
+	
+}
+p#3{
+	background-color: brown;
+}
+
+h1:hover{
+	color: purple;
+}
+h1:active {
+	color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

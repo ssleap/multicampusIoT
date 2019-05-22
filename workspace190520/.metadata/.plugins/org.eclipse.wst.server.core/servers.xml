@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v9.0 Server at 70.12.115.57-config" deployDir="wtpwebapps" hostname="70.12.115.57" id="Tomcat v9.0 Server at 70.12.115.57" name="Tomcat v9.0 Server at 70.12.115.57" runtime-id="Apache Tomcat v9.0" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="8">
+    <list key="modules" value0="edu1::org.eclipse.jst.jee.server:edu1::jst.web::4.0" value1="edu2::org.eclipse.jst.jee.server:edu2::jst.web::4.0"/>
+  </server>
+</servers>

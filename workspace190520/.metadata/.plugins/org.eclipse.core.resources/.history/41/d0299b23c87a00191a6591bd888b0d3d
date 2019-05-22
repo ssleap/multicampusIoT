@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content ="width=device-width, 
+initial-scale=1">
+<title>img tag</title>
+</head>
+<body>
+	
+	<h2>img &nbsp;&nbsp;&nbsp;&nbsp; 처리</h2>
+	<img src = "img/coffee11.gif" alt = "no image">
+	<img src = "/edu1/img/coffee1.gif" alt = "no image">
+	<img src = "./img/coffee2.gif" alt = "mo inage">
+	
+	
+	
+</body>
+</html>

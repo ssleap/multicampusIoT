@@ -1,0 +1,53 @@
+package test_scott;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import util.JDBCUtil;
+
+public class EmpTest {
+	public static void main(String[] args) {
+		
+		
+		String sql = 
+				"select count(m.employee_id) 직속부하직원수,m.employee_id 관리자사번,m.last_name 관리자이름 "
+				+ "from employees m, employees e "
+				+ "where m.employee_id = e.manager_id "
+				+ "having count(m.employee_id)>=8 "
+				+ "group by m.employee_id,m.last_name";
+	
+
+		
+		Connection con = null;
+		Statement st = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		int row = 0;
+		
+
+		try{
+			con = JDBCUtil.getConnection();
+			st = con.createStatement();
+			ps = con.prepareStatement(sql);
+			//? 세팅
+			rs = ps.executeQuery();
+			// 실행
+			while(rs.next()) {
+				System.out.print(rs.getInt("직속부하직원수")+" ");
+				System.out.print(rs.getInt("관리자사번")+" ");
+				System.out.print(rs.getString("관리자이름")+" ");
+				System.out.println();
+			}
+			// 결과값핸들링
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			JDBCUtil.close(con, ps, rs);
+		}
+	}
+}

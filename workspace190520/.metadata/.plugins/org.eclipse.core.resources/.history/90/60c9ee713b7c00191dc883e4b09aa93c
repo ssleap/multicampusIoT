@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content ="width=device-width, initial-scale=1">
+<title>회원가입 폼</title>
+</head>
+<body>
+
+	<h2>회원가입 폼</h2>
+	
+	<form action="" method = "post">
+	
+		이름 : <input type = "text" name = "" value = "">
+		<input type = "submit" value = "회원가입">
+		<input type = "reset" value = "취소">
+		<input type = "button" value = "button">
+		<input type = "checkbox">
+		<input type = "date">
+		<input type = "email">
+		파일 : <input type = "file">
+		<input type = "hidden">
+		이미지 : <input type = "image">
+		<input type = "month">
+		<input type = "number">
+		<input type = "password">
+		<input type = "radio">
+		<input type = "range">
+		<input type = "reset">
+		<input type = "search">
+		전화번호 : <input type = "tel">
+		<input type = "text">
+		<input type = "time">
+		<input type = "url">
+		<input type = "week">
+	
+	</form>
+
+</body>
+</html>

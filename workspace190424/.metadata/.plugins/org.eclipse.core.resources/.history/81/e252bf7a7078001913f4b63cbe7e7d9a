@@ -1,0 +1,61 @@
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import util.JDBCUtil;
+
+public class emptest {
+
+	public static void main(String[] args) {
+		
+				String sql ="select count(*) 직속부하직원수,e.manager_id 관리자사번,m.last_name 관리자이름 " + 
+						"from employees e, employees m " + 
+						"where e.manager_id = m.employee_id " + 
+						"group by e.manager_id, m.last_name " + 
+						"having count(*) >= 8 " + 
+						"order by 직속부하직원수";
+						
+				Connection con = null;
+				Statement st = null;
+				PreparedStatement ps = null;
+				ResultSet rs = null;
+				int row = 0;
+				
+				
+				try {
+					con = JDBCUtil.getConnection();
+					st=con.createStatement();					
+					ps = con.prepareStatement(sql); 					
+					//?셋팅작업
+					
+					
+					//실행
+					rs=ps.executeQuery();
+					//결과값 핸들링
+					while(rs.next()) {
+						System.out.print(rs.getInt("직속부하직원수")+"    ");
+						System.out.print(rs.getInt("관리자사번")+"  ");
+						System.out.print(rs.getString("관리자이름")+"  ");
+						System.out.println();
+						
+						
+					}
+					
+						
+					
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}catch (Exception e) {
+					e.printStackTrace();
+				}finally {
+					JDBCUtil.close(con, st, rs);		}
+				
+				
+
+			}
+
+	}
+
+

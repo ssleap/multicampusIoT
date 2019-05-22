@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TITLE</title>
+</head>
+<body>
+
+	<h1>IWG</h1>
+	
+	<h2>
+		link list
+	</h2>
+	
+	<a href = "test01.html">test01</a>
+	<a href = "file:///C:/workspace190520/edu1/WebContent/test01.html">test01</a>
+	<a href = "http://127.0.0.1:9090/edu1/WebContent/test01.html">test01</a>
+	<a href = "edu1/WebContent/test01.html">test01</a>
+	
+</body>
+</html>

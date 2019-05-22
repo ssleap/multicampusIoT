@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content ="width=device-width, initial-scale=1">
+<title>css 기본</title>
+</head>
+<body>
+
+	<h1>css basic</h1>
+	<p>HTML CSS JAVA
+	SCript
+	Java
+	C
+	C++프로그래밍 언어로, 스크립트 언어(Script Language)에 해당된다.
+	 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가 내장되어 있다. &nbsp;
+	 오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다. &nbsp;
+	 HTML이 웹 페이지의 기본 구조를 담당하고, &nbsp; 
+	 CSS가 디자인을 담당한다면 JavaScript는 &nbsp;
+	 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다.[1] &nbsp;
+	 웹 페이지를 자동차에 비유하자면, HTML은 자동차의 뼈대, &nbsp;
+	 CSS는 자동차의 외관, JavaScript는 자동차의 동력이라고 볼 수 있다.&nbsp;
+	
+	썬 마이크로시스템즈(현재 오라클)에서 개발한 &nbsp;
+	Java와는 별 관계가 없는 언어이다.&nbsp;
+	 이름이 비슷하다고 같은 언어가 아니다. &nbsp;
+	 사람들이 흔히 헷갈리는 부분 중 하나. &nbsp;
+	</p>
+
+</body>
+</html>
